@@ -1,12 +1,14 @@
 body {
-  width: 1280px;
-  height: 720px;
+  max-width: 1280px;
+  max-height: 720px;
   background: #38404B;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
 }
 
 .itens-superiores {
-
   width: 1270px;
   height: 150px;
 }
@@ -29,6 +31,24 @@ body {
   background: #38404B;
   box-shadow: 1px 1px 2px rgba(66, 75, 88, 0.3), -1px -1px 2px rgba(46, 53, 62, 0.5), inset -3px 3px 6px rgba(46, 53, 62, 0.2), inset 3px -3px 6px rgba(46, 53, 62, 0.2), inset -3px -3px 6px rgba(66, 75, 88, 0.9), inset 3px 3px 8px rgba(46, 53, 62, 0.9);
   border-radius: 16px;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(148, 173, 207, 0.7);
+}
+
+::-webkit-input-placeholder{
+  position: absolute;
+  left: 38px;
+  top: 20px;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(148, 173, 207, 0.7);
 }
 
 .imgEnviar {
@@ -37,7 +57,11 @@ body {
   height: 25px;
   left: 894px;
   top: 91px;
+  cursor: pointer;
+}
 
+input:active {
+  pointer-events: visible;
 }
 
 
@@ -45,10 +69,12 @@ body {
 
 
 .container-naoConcluida {
-  display: flex;
-  flex-direction: column;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 52px;
+  column-gap: 150px;
+  position: relative;
 
 }
 
@@ -57,24 +83,48 @@ body {
   height: 59px;
   background: #38404B;
   box-shadow: -5px 5px 10px rgba(48, 54, 64, 0.2), 5px -5px 10px rgba(48, 54, 64, 0.2), -5px -5px 10px rgba(64, 74, 86, 0.9), 5px 5px 13px rgba(48, 54, 64, 0.9), inset 1px 1px 2px rgba(64, 74, 86, 0.3), inset -1px -1px 2px rgba(48, 54, 64, 0.5);
-  border-radius: 16px
+  border-radius: 16px;
+  position: relative;
 }
 
-.inputNaoConcluido {
+/* .container-concluido > .tarefasConcluidas > .concluido{
+  all:unset;
   width: 18px;
   height: 18px;
-
+  background: red;
   border: 2.5px solid #94ADCF;
-  box-sizing: border-box;
+  cursor: pointer;
+  
+} */
+
+input[type=checkbox] {
+ position: relative;
+  cursor: pointer;
+  width: 1.3em;
+  height: 1.3em;
+  background-color: transparent;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid #94ADCF;
+  appearance: none;
+  left: 20px;
+  top: 18px;
+}
+
+input[type=checkbox]:checked {
+  background-color: #94ADCF;
 }
 
 .textoNaoConcluido {
+  position: relative;
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   color: #94ADCF;
+  left: 40px;
+  top: 19px;
 }
 
 /* Container Concluido */
@@ -83,9 +133,8 @@ body {
   position: relative;
   width: 141px;
   height: 32px;
-  left: 126px;
-  ;
-
+  left: 10%;
+  align-self: flex-start;
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
@@ -96,11 +145,12 @@ body {
 }
 
 .container-concluido {
-  display: flex;
-  flex-direction: column;
-  flex-flow: row wrap;
-  justify-content: space-around;
-
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 52px;
+  column-gap: 150px;
+  position: relative;
 }
 
 .tarefasConcluidas {
@@ -111,18 +161,34 @@ body {
   border-radius: 16px;
 }
 
-.concluido {
+/* .concluido {
+  all:unset;
+  border: none;
+  border-radius: 50%;
   width: 18px;
   height: 18px;
   background: #94ADCF;
+  border: 2.5px solid #94ADCF;
+  box-sizing: border-box;
+  cursor: pointer;
 }
-
+ */
 .textoConcluido {
+ position: relative;
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  text-decoration-line: line-through;
   color: #94ADCF;
+  left: 40px;
+  top: 19px;
+  text-decoration-line: line-through;
+}
+
+
+
+
+@media only screen and (max-width:980px) {
+  
 }

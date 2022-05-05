@@ -1,16 +1,22 @@
 var todasTarefas = new Array();
 var tarefasConcluidas = new Array();
 
+function primeiraLetraMaiuscula(text) {
+	var retorno = text.toLowerCase();
+  return retorno.charAt(0).toUpperCase() + retorno.slice(1);
+}
 function ordenar(array) {
 	return array.sort();
 }
 
 function inserirTarefa() {
 	var input = pegarInput();
-	var text = input.value;
-
+	var text = primeiraLetraMaiuscula(input.value);
+	
+	/* text.toLowerCase() */;
+/* 	console.log("texto : " + text.toLowerCase()); */
 	if (text !== '') {
-		todasTarefas.push(input.value);
+		todasTarefas.push(text);
 		/* console.log("valor input " + text) */
 		input.value = '';
 		atualizarLista();
@@ -40,7 +46,8 @@ function atualizarLista() {
 	}
 }
 function adicionarIncompleto() {
-	const texto = this.id;
+	/* const texto = this.id; */
+	const texto = primeiraLetraMaiuscula(this.id);
 
 	todasTarefas.push(texto);
 	todasTarefas.sort();
@@ -55,8 +62,9 @@ function adicionarIncompleto() {
 
 }
 function adicionarCompleto() {
-	const texto = this.id;
+	/* const texto = this.id; */
 	// colocar no concluido
+	const texto = primeiraLetraMaiuscula(this.id);
 	tarefasConcluidas.push(texto);
 	tarefasConcluidas.sort();
 

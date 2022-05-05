@@ -5,6 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=1280, initial-scale=1.0">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="src/styles/style.css">
 	<title>To Do List</title>
 </head>
@@ -13,8 +18,8 @@
 
 	<div class="itens-superiores">
 		<img src="src/images/toggle.svg" class="troggle">
-		<input type="text" class="inputTarefa"  id="tarefaDigitada">
-		<button onClick="inserirTarefa()" > <img src="src/images/Enter.svg" class="imgEnviar" ></button>
+		<input type="text" class="inputTarefa" placeholder="Add new task" id="tarefaDigitada">
+		<img src="src/images/Enter.svg" class="imgEnviar" onClick="inserirTarefa()" >
 	</div>
 
 
