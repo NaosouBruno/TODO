@@ -1,0 +1,128 @@
+body {
+  width: 1280px;
+  height: 720px;
+  background: #38404B;
+
+}
+
+.itens-superiores {
+
+  width: 1270px;
+  height: 150px;
+}
+
+.troggle {
+  position: absolute;
+  width: 40px;
+  height: 29px;
+  left: 1153px;
+  top: 95px;
+
+}
+
+.inputTarefa {
+  position: absolute;
+  width: 578px;
+  height: 59px;
+  left: 351px;
+  top: 74px;
+  background: #38404B;
+  box-shadow: 1px 1px 2px rgba(66, 75, 88, 0.3), -1px -1px 2px rgba(46, 53, 62, 0.5), inset -3px 3px 6px rgba(46, 53, 62, 0.2), inset 3px -3px 6px rgba(46, 53, 62, 0.2), inset -3px -3px 6px rgba(66, 75, 88, 0.9), inset 3px 3px 8px rgba(46, 53, 62, 0.9);
+  border-radius: 16px;
+}
+
+.imgEnviar {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 894px;
+  top: 91px;
+
+}
+
+
+/* TAREFAS */
+
+
+.container-naoConcluida {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+}
+
+.tarefasNaoConcluidas {
+  width: 449px;
+  height: 59px;
+  background: #38404B;
+  box-shadow: -5px 5px 10px rgba(48, 54, 64, 0.2), 5px -5px 10px rgba(48, 54, 64, 0.2), -5px -5px 10px rgba(64, 74, 86, 0.9), 5px 5px 13px rgba(48, 54, 64, 0.9), inset 1px 1px 2px rgba(64, 74, 86, 0.3), inset -1px -1px 2px rgba(48, 54, 64, 0.5);
+  border-radius: 16px
+}
+
+.inputNaoConcluido {
+  width: 18px;
+  height: 18px;
+
+  border: 2.5px solid #94ADCF;
+  box-sizing: border-box;
+}
+
+.textoNaoConcluido {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #94ADCF;
+}
+
+/* Container Concluido */
+
+.titulo {
+  position: relative;
+  width: 141px;
+  height: 32px;
+  left: 126px;
+  ;
+
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+
+  color: #94ADCF;
+}
+
+.container-concluido {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+}
+
+.tarefasConcluidas {
+  width: 449px;
+  height: 59px;
+  background: #38404B;
+  box-shadow: 1px 1px 2px rgba(64, 74, 86, 0.3), -1px -1px 2px rgba(48, 54, 64, 0.5), inset -5px 5px 10px rgba(48, 54, 64, 0.2), inset 5px -5px 10px rgba(48, 54, 64, 0.2), inset -5px -5px 10px rgba(64, 74, 86, 0.9), inset 5px 5px 13px rgba(48, 54, 64, 0.9);
+  border-radius: 16px;
+}
+
+.concluido {
+  width: 18px;
+  height: 18px;
+  background: #94ADCF;
+}
+
+.textoConcluido {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration-line: line-through;
+  color: #94ADCF;
+}
