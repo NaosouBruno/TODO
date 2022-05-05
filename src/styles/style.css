@@ -65,9 +65,6 @@ input:active {
 }
 
 
-/* TAREFAS */
-
-
 .container-naoConcluida {
   display: grid;
   margin-top: 40px;
@@ -87,15 +84,7 @@ input:active {
   position: relative;
 }
 
-/* .container-concluido > .tarefasConcluidas > .concluido{
-  all:unset;
-  width: 18px;
-  height: 18px;
-  background: red;
-  border: 2.5px solid #94ADCF;
-  cursor: pointer;
-  
-} */
+
 
 input[type=checkbox] {
  position: relative;
@@ -127,7 +116,6 @@ input[type=checkbox]:checked {
   top: 19px;
 }
 
-/* Container Concluido */
 
 .titulo {
   position: relative;
@@ -161,18 +149,6 @@ input[type=checkbox]:checked {
   border-radius: 16px;
 }
 
-/* .concluido {
-  all:unset;
-  border: none;
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  background: #94ADCF;
-  border: 2.5px solid #94ADCF;
-  box-sizing: border-box;
-  cursor: pointer;
-}
- */
 .textoConcluido {
  position: relative;
   font-family: 'Ubuntu';
@@ -189,6 +165,6 @@ input[type=checkbox]:checked {
 
 
 
-@media only screen and (max-width:980px) {
-  
+@media only screen and (max-width:550px) {
+
 }

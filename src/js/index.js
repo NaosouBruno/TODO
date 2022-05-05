@@ -13,18 +13,17 @@ function inserirTarefa() {
 	var input = pegarInput();
 	var text = primeiraLetraMaiuscula(input.value);
 	
-	/* text.toLowerCase() */;
-/* 	console.log("texto : " + text.toLowerCase()); */
+
 	if (text !== '') {
 		todasTarefas.push(text);
-		/* console.log("valor input " + text) */
+	
 		input.value = '';
 		atualizarLista();
 	}
 }
 
 function atualizarLista() {
-	/* 	console.log("atualizar lista " + todasTarefas); */
+
 	if (todasTarefas.length >= 0) {
 		zerarTopContainer();
 		todasTarefas = ordenar(todasTarefas);
@@ -46,7 +45,7 @@ function atualizarLista() {
 	}
 }
 function adicionarIncompleto() {
-	/* const texto = this.id; */
+	
 	const texto = primeiraLetraMaiuscula(this.id);
 
 	todasTarefas.push(texto);
@@ -62,17 +61,15 @@ function adicionarIncompleto() {
 
 }
 function adicionarCompleto() {
-	/* const texto = this.id; */
-	// colocar no concluido
+
 	const texto = primeiraLetraMaiuscula(this.id);
 	tarefasConcluidas.push(texto);
 	tarefasConcluidas.sort();
 
-	//remover do nao concluido
+
 	const index = todasTarefas.indexOf(texto);
 	todasTarefas.splice(index, 1);
 
-	// atualizar exibicao
 	atualizarLista();
 	atualizasCompletos();
 
