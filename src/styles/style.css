@@ -1,6 +1,6 @@
 body {
   width: 1280px;
-  height: 720;
+
   height: auto;
   display: flex;
   flex-direction: column;
@@ -10,8 +10,7 @@ body {
 }
 
 .container {
-  margin: 5rem;
-
+  margin: 5rem auto;
   width: 100%;
   height: auto;
   background: #38404B;
@@ -176,3 +175,11 @@ input[type=checkbox]:checked {
   top: 19px;
   text-decoration-line: line-through;
 }
+
+/* .menuBar{
+  display: none;
+}
+
+.item-list{
+  display: none;
+} */
