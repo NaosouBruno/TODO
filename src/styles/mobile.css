@@ -6,6 +6,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     align-items: center;
     position: absolute;
     margin-left: 0;
@@ -16,7 +17,7 @@
     /* width: 100%;
     height: auto; */
     width: 390px;
-    height: 844px;
+    height: auto;
     background: #38404B;
     padding: 4rem 4rem 4rem 4rem;
     border-radius: 20px;
