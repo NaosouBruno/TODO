@@ -10,6 +10,7 @@ function ordenar(array) {
 }
 
 function inserirTarefa() {
+	
 	var input = pegarInput();
 	var text = primeiraLetraMaiuscula(input.value);
 	
@@ -114,3 +115,4 @@ function zerarBotContainer() {
 	return document.querySelector(".container-concluido").innerHTML = "";
 
 }
+

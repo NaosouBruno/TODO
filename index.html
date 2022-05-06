@@ -12,31 +12,47 @@
 
 	<link rel="stylesheet" href="src/styles/style.css">
 	<link rel="stylesheet" href="src/styles/mobile.css">
+	<link rel="stylesheet" href="src/styles/botaoToggle.css">
 	<title>To Do List</title>
 </head>
 
 <body>
-<div class="container">
-	<div class="itens-superiores">
-		<div class="qqr">
-			<input type="text" class="inputTarefa" placeholder="Add new task" id="tarefaDigitada">
-			<img src="src/images/Enter.svg" class="imgEnviar" onClick="inserirTarefa()">
+	<div class="container">
+		<div class="itens-superiores">
+			<div class="qqr">
+				<input type="text" class="inputTarefa" placeholder="Add new task" id="tarefaDigitada">
+				<img src="src/images/Enter.svg" class="imgEnviar" onClick="inserirTarefa()">
+			</div>
+			<img src="src/images/toggle.svg" class="troggle">
 		</div>
-		<img src="src/images/toggle.svg" class="troggle">
+		<!-- ADIÇAO DO MENU BAR -->
+<!-- 
+		<div class="menuBar">
+			<div class="containerMenu" onclick="openNav()">
+				<div class="circulo">
+					<div class="deitado">
+						<div class="emPe">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="mySidebar" class="item-list">
+			<input type="text" class="inputTarefa teste" placeholder="Add new task" id="tarefaDigitada">
+			<img src="src/images/Enter.svg" class="teste" onClick="inserirTarefa()">
+		</div> -->
+		<!-- FIM DA ADIÇAO -->
+
+		<div class="container-naoConcluida"></div>
+
+		<h1 class="titulo">Completed</h1>
+
+		<div class="container-concluido"> </div>
 	</div>
-
-	<div class="container-naoConcluida">
-
-	</div>
-
-	<h1 class="titulo">Completed</h1>
-
-	<div class="container-concluido">
-
-	</div>
-</div>
 </body>
 
 <script src="src/js/index.js"></script>
+<script src="src/js/mobile.js"></script>
 
 </html>
