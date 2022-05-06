@@ -1,0 +1,22 @@
+@media screen and (max-width:550px) {
+  body {
+    max-width: 550px;
+    max-height: 850px;
+  }/* 
+  .inputTarefa {
+    
+    border: 2px solid red;
+    width: 390px;
+    height: 59;
+    background: #38404B;
+    border-radius: 47px; 
+  }*/
+  .titulo {
+    border: 2px solid red;
+  }
+
+  .itens-superiores{
+    display: none;
+  }
+
+}

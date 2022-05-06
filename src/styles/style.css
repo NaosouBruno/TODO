@@ -176,3 +176,11 @@ input[type=checkbox]:checked {
   top: 19px;
   text-decoration-line: line-through;
 }
+
+/* .menuBar{
+  display: none;
+} */
+
+.item-list{
+  display: none;
+}
