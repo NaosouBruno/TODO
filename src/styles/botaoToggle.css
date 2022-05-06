@@ -39,7 +39,7 @@
  */   width: 0;
    position: fixed;
    z-index: 1;
- 
+   display: block;
    background-color: #111;
    overflow-x: hidden;
    transition: 0.5s;
@@ -69,11 +69,19 @@
  }
  
  .menuBar {
+   display: block;
    transition: margin-bottom .5s;
    padding: 16px;
  }
  
 
+/*  .inputTarefa{
+    border: 2px solid red;
+    width: 390px;
+    height: 59;
+    background: #38404B;
+    border-radius: 47px; 
+ } */
 
   /* FIM DO BOTAO */
 }
