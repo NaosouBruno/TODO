@@ -1,22 +1,5 @@
 body {
-  width: 1280px;
-  height: 720;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  margin-left: 8.5rem;
-}
-
-.container {
-  margin: 5rem;
-
-  width: 100%;
-  height: auto;
-  background: #38404B;
-  padding: 5rem;
-  border-radius: 20px;
+  background: #38404b;
 }
 
 .itens-superiores {
@@ -32,20 +15,23 @@ body {
 }
 
 .troggle {
-
   margin-left: 20%;
 }
 
 .inputTarefa {
-
   width: 578px;
   height: 59px;
-  margin-left: 2%;
+  /* margin-left: 2%; */
 
-  background: #38404B;
-  box-shadow: 1px 1px 2px rgba(66, 75, 88, 0.3), -1px -1px 2px rgba(46, 53, 62, 0.5), inset -3px 3px 6px rgba(46, 53, 62, 0.2), inset 3px -3px 6px rgba(46, 53, 62, 0.2), inset -3px -3px 6px rgba(66, 75, 88, 0.9), inset 3px 3px 8px rgba(46, 53, 62, 0.9);
+  background: #38404b;
+  box-shadow: 1px 1px 2px rgba(66, 75, 88, 0.3),
+    -1px -1px 2px rgba(46, 53, 62, 0.5),
+    inset -3px 3px 6px rgba(46, 53, 62, 0.2),
+    inset 3px -3px 6px rgba(46, 53, 62, 0.2),
+    inset -3px -3px 6px rgba(66, 75, 88, 0.9),
+    inset 3px 3px 8px rgba(46, 53, 62, 0.9);
   border-radius: 16px;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -57,12 +43,16 @@ body {
   position: absolute;
   left: 38px;
   top: 20px;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: rgba(148, 173, 207, 0.7);
+}
+
+input[type="text"] {
+  padding-left: 38px;
 }
 
 .imgEnviar {
@@ -71,14 +61,12 @@ body {
   height: 25px;
 
   cursor: pointer;
-  padding-right: 2%
+  padding-right: 2%;
 }
 
 input:active {
   pointer-events: visible;
 }
-
-
 
 .container-naoConcluida {
   display: grid;
@@ -87,21 +75,21 @@ input:active {
   row-gap: 52px;
   column-gap: 150px;
   position: relative;
-
 }
 
 .tarefasNaoConcluidas {
   width: 449px;
   height: 59px;
-  background: #38404B;
-  box-shadow: -5px 5px 10px rgba(48, 54, 64, 0.2), 5px -5px 10px rgba(48, 54, 64, 0.2), -5px -5px 10px rgba(64, 74, 86, 0.9), 5px 5px 13px rgba(48, 54, 64, 0.9), inset 1px 1px 2px rgba(64, 74, 86, 0.3), inset -1px -1px 2px rgba(48, 54, 64, 0.5);
+  background: #38404b;
+  box-shadow: -5px 5px 10px rgba(48, 54, 64, 0.2),
+    5px -5px 10px rgba(48, 54, 64, 0.2), -5px -5px 10px rgba(64, 74, 86, 0.9),
+    5px 5px 13px rgba(48, 54, 64, 0.9), inset 1px 1px 2px rgba(64, 74, 86, 0.3),
+    inset -1px -1px 2px rgba(48, 54, 64, 0.5);
   border-radius: 16px;
   position: relative;
 }
 
-
-
-input[type=checkbox] {
+input[type="checkbox"] {
   position: relative;
   cursor: pointer;
   width: 1.3em;
@@ -109,28 +97,27 @@ input[type=checkbox] {
   background-color: transparent;
   border-radius: 50%;
   vertical-align: middle;
-  border: 2px solid #94ADCF;
+  border: 2px solid #94adcf;
   appearance: none;
   left: 20px;
   top: 18px;
 }
 
-input[type=checkbox]:checked {
-  background-color: #94ADCF;
+input[type="checkbox"]:checked {
+  background-color: #94adcf;
 }
 
 .textoNaoConcluido {
   position: relative;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  color: #94ADCF;
+  color: #94adcf;
   left: 40px;
   top: 19px;
 }
-
 
 .titulo {
   position: relative;
@@ -138,13 +125,13 @@ input[type=checkbox]:checked {
   height: 32px;
   left: 10%;
   align-self: flex-start;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
   line-height: 32px;
 
-  color: #94ADCF;
+  color: #94adcf;
 }
 
 .container-concluido {
@@ -159,20 +146,33 @@ input[type=checkbox]:checked {
 .tarefasConcluidas {
   width: 449px;
   height: 59px;
-  background: #38404B;
-  box-shadow: 1px 1px 2px rgba(64, 74, 86, 0.3), -1px -1px 2px rgba(48, 54, 64, 0.5), inset -5px 5px 10px rgba(48, 54, 64, 0.2), inset 5px -5px 10px rgba(48, 54, 64, 0.2), inset -5px -5px 10px rgba(64, 74, 86, 0.9), inset 5px 5px 13px rgba(48, 54, 64, 0.9);
+  background: #38404b;
+  box-shadow: 1px 1px 2px rgba(64, 74, 86, 0.3),
+    -1px -1px 2px rgba(48, 54, 64, 0.5),
+    inset -5px 5px 10px rgba(48, 54, 64, 0.2),
+    inset 5px -5px 10px rgba(48, 54, 64, 0.2),
+    inset -5px -5px 10px rgba(64, 74, 86, 0.9),
+    inset 5px 5px 13px rgba(48, 54, 64, 0.9);
   border-radius: 16px;
 }
 
 .textoConcluido {
   position: relative;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  color: #94ADCF;
+  color: #94adcf;
   left: 40px;
   top: 19px;
   text-decoration-line: line-through;
 }
+
+/* .menuBar{
+  display: none;
+}
+
+.item-list{
+  display: none;
+} */
