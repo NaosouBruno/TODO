@@ -2,117 +2,97 @@ var todasTarefas = new Array();
 var tarefasConcluidas = new Array();
 
 function primeiraLetraMaiuscula(text) {
-	var retorno = text.toLowerCase();
+  var retorno = text.toLowerCase();
   return retorno.charAt(0).toUpperCase() + retorno.slice(1);
 }
 function ordenar(array) {
-	return array.sort();
+  return array.sort();
 }
 
 function inserirTarefa() {
-	
-	var input = pegarInput();
-	var text = primeiraLetraMaiuscula(input.value);
-	
+  var input = pegarInput();
+  var text = primeiraLetraMaiuscula(input.value);
 
-	if (text !== '') {
-		todasTarefas.push(text);
-	
-		input.value = '';
-		atualizarLista();
-	}
+  if (text !== "") {
+    todasTarefas.push(text);
+
+    input.value = "";
+    atualizarLista();
+  }
 }
 
 function atualizarLista() {
+  if (todasTarefas.length >= 0) {
+    zerarTopContainer();
+    todasTarefas = ordenar(todasTarefas);
 
-	if (todasTarefas.length >= 0) {
-		zerarTopContainer();
-		todasTarefas = ordenar(todasTarefas);
+    for (i = 0; i < todasTarefas.length; i++) {
+      const localTarefa = document.createElement("div");
 
-		for (i = 0; i < todasTarefas.length; i++) {
+      localTarefa.classList.add("tarefasNaoConcluidas");
 
-			const localTarefa = document.createElement('div');
-
-			localTarefa.classList.add("tarefasNaoConcluidas");
-
-			localTarefa.innerHTML = `
+      localTarefa.innerHTML = `
 			<input type="checkbox" class="inputNaoConcluido"  id="${todasTarefas[i]}" unchacked >
 			<label  class="textoNaoConcluido" id="${i}">${todasTarefas[i]}</label>
-			`
-			localTarefa.children[0].addEventListener("click", adicionarCompleto);
-			document.querySelector(".container-naoConcluida").appendChild(localTarefa);
-
-		}
-	}
+			`;
+      localTarefa.children[0].addEventListener("click", adicionarCompleto);
+      document
+        .querySelector(".container-naoConcluida")
+        .appendChild(localTarefa);
+    }
+  }
 }
 function adicionarIncompleto() {
-	
-	const texto = primeiraLetraMaiuscula(this.id);
+  const texto = primeiraLetraMaiuscula(this.id);
 
-	todasTarefas.push(texto);
-	todasTarefas.sort();
+  todasTarefas.push(texto);
+  todasTarefas.sort();
 
-	const index = tarefasConcluidas.indexOf(texto);
-	tarefasConcluidas.splice(index, 1);
+  const index = tarefasConcluidas.indexOf(texto);
+  tarefasConcluidas.splice(index, 1);
 
-	atualizarLista();
-	atualizasCompletos();
-	console.log("incompleto " + todasTarefas);
-
-
+  atualizarLista();
+  atualizasCompletos();
 }
 function adicionarCompleto() {
+  const texto = primeiraLetraMaiuscula(this.id);
+  tarefasConcluidas.push(texto);
+  tarefasConcluidas.sort();
 
-	const texto = primeiraLetraMaiuscula(this.id);
-	tarefasConcluidas.push(texto);
-	tarefasConcluidas.sort();
+  const index = todasTarefas.indexOf(texto);
+  todasTarefas.splice(index, 1);
 
-
-	const index = todasTarefas.indexOf(texto);
-	todasTarefas.splice(index, 1);
-
-	atualizarLista();
-	atualizasCompletos();
-
-	console.log(" texto " + texto);
-	console.log(this);
+  atualizarLista();
+  atualizasCompletos();
 }
 
 function atualizasCompletos() {
+  if (tarefasConcluidas.length >= 0) {
+    zerarBotContainer();
 
-	console.log(' tarefas concluidas: ' + tarefasConcluidas);
+    tarefasConcluidas = ordenar(tarefasConcluidas);
 
-	if (tarefasConcluidas.length >= 0) {
-		zerarBotContainer();
+    for (i = 0; i < tarefasConcluidas.length; i++) {
+      const localTarefa = document.createElement("div");
 
-		tarefasConcluidas = ordenar(tarefasConcluidas);
+      localTarefa.classList.add("tarefasConcluidas");
 
-		for (i = 0; i < tarefasConcluidas.length; i++) {
-
-			const localTarefa = document.createElement('div');
-
-			localTarefa.classList.add("tarefasConcluidas");
-
-			localTarefa.innerHTML = `
+      localTarefa.innerHTML = `
 				<input type="checkbox" class="concluido" checked id="${tarefasConcluidas[i]}"  >
 				<label class="textoConcluido"  id="${i}">${tarefasConcluidas[i]}</label>
-				`
-			localTarefa.children[0].addEventListener("click", adicionarIncompleto);
-			document.querySelector(".container-concluido").appendChild(localTarefa);
-
-		}
-	}
+				`;
+      localTarefa.children[0].addEventListener("click", adicionarIncompleto);
+      document.querySelector(".container-concluido").appendChild(localTarefa);
+    }
+  }
 }
 function pegarInput() {
-	return document.getElementById("tarefaDigitada");
+  return document.getElementById("tarefaDigitada");
 }
 
 function zerarTopContainer() {
-	return document.querySelector(".container-naoConcluida").innerHTML = "";
-
+  return (document.querySelector(".container-naoConcluida").innerHTML = "");
 }
 function zerarBotContainer() {
-	return document.querySelector(".container-concluido").innerHTML = "";
-
+  return (document.querySelector(".container-concluido").innerHTML = "");
 }
-

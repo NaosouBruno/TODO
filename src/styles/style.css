@@ -2,9 +2,6 @@ body {
   background: #38404b;
 }
 
-.container {
-}
-
 .itens-superiores {
   display: flex;
   align-items: center;
